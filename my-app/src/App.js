@@ -8,20 +8,24 @@ import {
   Image,
   Pressable,
   Linking,
+  Dimensions
 } from "react-native";
 
+const marginHorizontal = 1;
+const marginVertical = 1;
 const gitHub = "#010409";
 const colorFontGit = "#C9D1D9";
 const colorDarkFontGit = "#4F565E";
 const imgProfile = "https://avatars.githubusercontent.com/u/89056548?v=4";
 const linkProfile = "https://github.com/ThieresCA";
 
+
 export default function App() {
   const handlePress = async () => {
     const res = await Linking.canOpenURL(linkProfile);
     if (res) {
       Linking.openURL(linkProfile);
-    }
+    } 
   };
   return (
     <SafeAreaView style={style.container}>
@@ -50,14 +54,105 @@ export default function App() {
         >
           Estudante de Análise e desenvolvimento de sistemas
         </Text>
-        <Pressable onPress={handlePress}>
+        
+      </View>
+      <View style={style.sectionContainer}>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+      </View>
+      <View style={style.sectionContainer}>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+      </View>
+      <View style={style.sectionContainer}>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+      </View>
+      <View style={style.sectionContainer}>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+      </View>
+      <View style={style.sectionContainer}>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.lightGreen}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+      </View>
+      <View style={style.sectionContainer}>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+        <View style={style.boxContainer}><Text></Text></View>
+      </View>
+      <Pressable onPress={handlePress} style={style.content}>
           <View style={style.button}>
             <Text style={[style.defaultText, style.textButton]}>
               Open in Github
             </Text>
           </View>
         </Pressable>
-      </View>
     </SafeAreaView>
   );
 }
@@ -109,5 +204,43 @@ const style = StyleSheet.create({
   textButton: {
     fontWeight: "bold",
     fontSize: 16,
+  },
+
+  item:{
+    borderRadius: 10,
+    color: 'red'
+  },
+  scrollContainer: {
+    flex: 1,
+  },
+  sectionContainer: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  boxContainer: {
+    marginTop: marginVertical,
+    marginBottom: marginVertical,
+    marginLeft: marginHorizontal,
+    marginRight: marginHorizontal,
+    width: 10,
+    height: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'green',
+    borderRadius: 5,
+  }, 
+  lightGreen: {
+    marginTop: marginVertical,
+    marginBottom: marginVertical,
+    marginLeft: marginHorizontal,
+    marginRight: marginHorizontal,
+    width: 10,
+    height: 10,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#3FCF52',
+    borderRadius: 5,
   },
 });
